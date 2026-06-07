@@ -1,0 +1,18 @@
+
+Menu
+
+Conexiones
+  Nueva....					
+  Abrir...					(abre un INI y establece una conexión actual => muestra la cadena)
+  Conectar
+  Desconectar
+  Editor de conexiones
+---
+  ultimas conexiones
+
+
+Comandos
+ Ejecutar
+
+Salir
+ 
