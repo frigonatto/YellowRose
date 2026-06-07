@@ -31,12 +31,15 @@
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             toolStripStatusLabel2 = new ToolStripStatusLabel();
-            toolStripStatusLabel3 = new ToolStripStatusLabel();
+            tslModo = new ToolStripStatusLabel();
             toolStripStatusLabel4 = new ToolStripStatusLabel();
-            toolStripStatusLabel5 = new ToolStripStatusLabel();
+            tslFormSizeAndLocation = new ToolStripStatusLabel();
             splitContainer1 = new SplitContainer();
             lstConexiones = new ListBox();
             fraConexionSeleccionada = new GroupBox();
+            chkEncriptarPassword = new CheckBox();
+            btnGenerarArchivo = new Button();
+            btnProbarConexion = new Button();
             lblCadenaDeConexion = new Label();
             label7 = new Label();
             label6 = new Label();
@@ -52,9 +55,6 @@
             textBox1 = new TextBox();
             label2 = new Label();
             label1 = new Label();
-            btnProbarConexion = new Button();
-            btnGenerarArchivo = new Button();
-            checkBox1 = new CheckBox();
             statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
@@ -65,7 +65,7 @@
             // 
             // statusStrip1
             // 
-            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, toolStripStatusLabel2, toolStripStatusLabel3, toolStripStatusLabel4, toolStripStatusLabel5 });
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, toolStripStatusLabel2, tslModo, toolStripStatusLabel4, tslFormSizeAndLocation });
             statusStrip1.Location = new Point(0, 441);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(800, 24);
@@ -90,14 +90,14 @@
             toolStripStatusLabel2.Size = new Size(122, 19);
             toolStripStatusLabel2.Text = ".";
             // 
-            // toolStripStatusLabel3
+            // tslModo
             // 
-            toolStripStatusLabel3.AutoSize = false;
-            toolStripStatusLabel3.BorderSides = ToolStripStatusLabelBorderSides.Left | ToolStripStatusLabelBorderSides.Top | ToolStripStatusLabelBorderSides.Right | ToolStripStatusLabelBorderSides.Bottom;
-            toolStripStatusLabel3.BorderStyle = Border3DStyle.Sunken;
-            toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            toolStripStatusLabel3.Size = new Size(122, 19);
-            toolStripStatusLabel3.Text = ".";
+            tslModo.AutoSize = false;
+            tslModo.BorderSides = ToolStripStatusLabelBorderSides.Left | ToolStripStatusLabelBorderSides.Top | ToolStripStatusLabelBorderSides.Right | ToolStripStatusLabelBorderSides.Bottom;
+            tslModo.BorderStyle = Border3DStyle.Sunken;
+            tslModo.Name = "tslModo";
+            tslModo.Size = new Size(122, 19);
+            tslModo.Text = ".";
             // 
             // toolStripStatusLabel4
             // 
@@ -108,14 +108,14 @@
             toolStripStatusLabel4.Size = new Size(122, 19);
             toolStripStatusLabel4.Text = ".";
             // 
-            // toolStripStatusLabel5
+            // tslFormSizeAndLocation
             // 
-            toolStripStatusLabel5.AutoSize = false;
-            toolStripStatusLabel5.BorderSides = ToolStripStatusLabelBorderSides.Left | ToolStripStatusLabelBorderSides.Top | ToolStripStatusLabelBorderSides.Right | ToolStripStatusLabelBorderSides.Bottom;
-            toolStripStatusLabel5.BorderStyle = Border3DStyle.Sunken;
-            toolStripStatusLabel5.Name = "toolStripStatusLabel5";
-            toolStripStatusLabel5.Size = new Size(122, 19);
-            toolStripStatusLabel5.Text = ".";
+            tslFormSizeAndLocation.AutoSize = false;
+            tslFormSizeAndLocation.BorderSides = ToolStripStatusLabelBorderSides.Left | ToolStripStatusLabelBorderSides.Top | ToolStripStatusLabelBorderSides.Right | ToolStripStatusLabelBorderSides.Bottom;
+            tslFormSizeAndLocation.BorderStyle = Border3DStyle.Sunken;
+            tslFormSizeAndLocation.Name = "tslFormSizeAndLocation";
+            tslFormSizeAndLocation.Size = new Size(250, 19);
+            tslFormSizeAndLocation.Text = ".";
             // 
             // splitContainer1
             // 
@@ -147,7 +147,7 @@
             // 
             // fraConexionSeleccionada
             // 
-            fraConexionSeleccionada.Controls.Add(checkBox1);
+            fraConexionSeleccionada.Controls.Add(chkEncriptarPassword);
             fraConexionSeleccionada.Controls.Add(btnGenerarArchivo);
             fraConexionSeleccionada.Controls.Add(btnProbarConexion);
             fraConexionSeleccionada.Controls.Add(lblCadenaDeConexion);
@@ -172,13 +172,41 @@
             fraConexionSeleccionada.TabStop = false;
             fraConexionSeleccionada.Text = "Conexión Seleccionada";
             // 
+            // chkEncriptarPassword
+            // 
+            chkEncriptarPassword.AutoSize = true;
+            chkEncriptarPassword.Location = new Point(357, 106);
+            chkEncriptarPassword.Name = "chkEncriptarPassword";
+            chkEncriptarPassword.Size = new Size(136, 19);
+            chkEncriptarPassword.TabIndex = 9;
+            chkEncriptarPassword.Text = "Encriptar Contraseña";
+            chkEncriptarPassword.UseVisualStyleBackColor = true;
+            // 
+            // btnGenerarArchivo
+            // 
+            btnGenerarArchivo.Location = new Point(12, 331);
+            btnGenerarArchivo.Name = "btnGenerarArchivo";
+            btnGenerarArchivo.Size = new Size(110, 23);
+            btnGenerarArchivo.TabIndex = 17;
+            btnGenerarArchivo.Text = "Generar Archivo";
+            btnGenerarArchivo.UseVisualStyleBackColor = true;
+            // 
+            // btnProbarConexion
+            // 
+            btnProbarConexion.Location = new Point(430, 142);
+            btnProbarConexion.Name = "btnProbarConexion";
+            btnProbarConexion.Size = new Size(75, 23);
+            btnProbarConexion.TabIndex = 12;
+            btnProbarConexion.Text = "Probar";
+            btnProbarConexion.UseVisualStyleBackColor = true;
+            // 
             // lblCadenaDeConexion
             // 
             lblCadenaDeConexion.AutoSize = true;
             lblCadenaDeConexion.Location = new Point(136, 301);
             lblCadenaDeConexion.Name = "lblCadenaDeConexion";
             lblCadenaDeConexion.Size = new Size(124, 15);
-            lblCadenaDeConexion.TabIndex = 15;
+            lblCadenaDeConexion.TabIndex = 16;
             lblCadenaDeConexion.Text = "lblCadenaDeConexion";
             // 
             // label7
@@ -187,7 +215,7 @@
             label7.Location = new Point(11, 301);
             label7.Name = "label7";
             label7.Size = new Size(119, 15);
-            label7.TabIndex = 14;
+            label7.TabIndex = 15;
             label7.Text = "Cadena de Conexión:";
             // 
             // label6
@@ -196,7 +224,7 @@
             label6.Location = new Point(23, 150);
             label6.Name = "label6";
             label6.Size = new Size(54, 15);
-            label6.TabIndex = 13;
+            label6.TabIndex = 10;
             label6.Text = "Nombre:";
             // 
             // textBox6
@@ -205,7 +233,7 @@
             textBox6.Multiline = true;
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(415, 81);
-            textBox6.TabIndex = 12;
+            textBox6.TabIndex = 14;
             // 
             // textBox5
             // 
@@ -220,7 +248,7 @@
             label5.Location = new Point(12, 199);
             label5.Name = "label5";
             label5.Size = new Size(72, 15);
-            label5.TabIndex = 10;
+            label5.TabIndex = 13;
             label5.Text = "Descripción:";
             // 
             // textBox4
@@ -235,7 +263,7 @@
             textBox3.Location = new Point(209, 70);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 7;
+            textBox3.TabIndex = 6;
             // 
             // label4
             // 
@@ -243,7 +271,7 @@
             label4.Location = new Point(154, 104);
             label4.Name = "label4";
             label4.Size = new Size(67, 15);
-            label4.TabIndex = 6;
+            label4.TabIndex = 7;
             label4.Text = "Contraseña";
             // 
             // label3
@@ -277,7 +305,7 @@
             textBox1.Location = new Point(102, 29);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(196, 23);
-            textBox1.TabIndex = 2;
+            textBox1.TabIndex = 1;
             // 
             // label2
             // 
@@ -285,7 +313,7 @@
             label2.Location = new Point(348, 32);
             label2.Name = "label2";
             label2.Size = new Size(51, 15);
-            label2.TabIndex = 1;
+            label2.TabIndex = 2;
             label2.Text = "Catalog:";
             // 
             // label1
@@ -297,34 +325,6 @@
             label1.TabIndex = 0;
             label1.Text = "Data Source:";
             // 
-            // btnProbarConexion
-            // 
-            btnProbarConexion.Location = new Point(430, 142);
-            btnProbarConexion.Name = "btnProbarConexion";
-            btnProbarConexion.Size = new Size(75, 23);
-            btnProbarConexion.TabIndex = 16;
-            btnProbarConexion.Text = "Probar";
-            btnProbarConexion.UseVisualStyleBackColor = true;
-            // 
-            // btnGenerarArchivo
-            // 
-            btnGenerarArchivo.Location = new Point(12, 331);
-            btnGenerarArchivo.Name = "btnGenerarArchivo";
-            btnGenerarArchivo.Size = new Size(110, 23);
-            btnGenerarArchivo.TabIndex = 17;
-            btnGenerarArchivo.Text = "Generar Archivo";
-            btnGenerarArchivo.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(357, 106);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(82, 19);
-            checkBox1.TabIndex = 18;
-            checkBox1.Text = "checkBox1";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
             // frmEditorDeConexiones
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -332,8 +332,14 @@
             ClientSize = new Size(800, 465);
             Controls.Add(splitContainer1);
             Controls.Add(statusStrip1);
+            KeyPreview = true;
             Name = "frmEditorDeConexiones";
             Text = "Yellow Rose";
+            FormClosing += frmEditorDeConexiones_FormClosing;
+            Load += frmEditorDeConexiones_Load;
+            KeyUp += frmEditorDeConexiones_KeyUp;
+            Move += frmEditorDeConexiones_Move;
+            Resize += frmEditorDeConexiones_Resize;
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
             splitContainer1.Panel1.ResumeLayout(false);
@@ -353,9 +359,9 @@
         private ListBox lstConexiones;
         private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStripStatusLabel toolStripStatusLabel2;
-        private ToolStripStatusLabel toolStripStatusLabel3;
+        private ToolStripStatusLabel tslModo;
         private ToolStripStatusLabel toolStripStatusLabel4;
-        private ToolStripStatusLabel toolStripStatusLabel5;
+        private ToolStripStatusLabel tslFormSizeAndLocation;
         private GroupBox fraConexionSeleccionada;
         private CheckBox checkBox2;
         private TextBox textBox4;
@@ -374,7 +380,7 @@
         private TextBox textBox6;
         private TextBox textBox5;
         private Button btnProbarConexion;
-        private CheckBox checkBox1;
+        private CheckBox chkEncriptarPassword;
         private Button btnGenerarArchivo;
     }
 }
