@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace YellowRose
+namespace YellowRose.Clases
 {
-    public class Connection
+    public class Exceptions
     {
     }
 }
